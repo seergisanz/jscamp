@@ -6,16 +6,21 @@
   <meta charset="UTF-8" />
   <meta name="description" content="Encuentra las mejores ofertas de trabajo para desarrolladores en DevJobs.">
 
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./styles/styles.css" />
 </head>
 
 <body>
   <header>
-    <h1>DevJobs</h1>
-
+    <div>
+      <svg width="48" height="48" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M12.08 24 4 19.248 9.955 8.752l8.085 4.744L18.045 4h11.91l.005 9.496 8.085-4.744L44 19.248 35.92 24 44 28.752l-5.955 10.496-8.085-4.744L29.955 44h-11.91l-.005-9.496-8.085 4.744L4 28.752z" fill="currentColor" fill-rule="evenodd"/></svg>
+      <h1>DevJobs</h1>
+    </div>
     <nav>
-      <a href="">Inicio</a>
+      <a href ="./index.html">Inicio</a>
+      <a href="./search-results.html">Buscar</a>
       <a href="">Empleos</a>
+      <a href="">Empresas</a>
+      <a href="">Salarios</a>
     </nav>
 
     <div>
@@ -26,24 +31,26 @@
 
   <main>
     <section>
-      <img src="./background.webp" width="200" />
+      <img src="./images/background.webp" width="200" />
 
       <h1>Encuentra el trabajo de tus sueños</h1>
 
       <p>Únete a la comunidad más grande de desarrolladores y encuentra tu próxima oportunidad.</p>
 
       <form role="search">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-          class="icon icon-tabler icons-tabler-outline icon-tabler-search">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
-          <path d="M21 21l-6 -6" />
-        </svg>
-
+        <div>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+              <path d="M21 21l-6 -6" />
+            </svg>
+          </span>
         <input required type="text" placeholder="Buscar empleos por título, habilidad o empresa">
-
         <button type="submit">Buscar</button>
+      </div>
       </form>
     </section>
 
@@ -95,21 +102,6 @@
 
   <footer>
     <small>&copy; 2025 DevJobs. Todos los derechos reservados.</small>
-  </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-  <footer style="padding-bottom: 100000px">
-
   </footer>
 </body>
 
