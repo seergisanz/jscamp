@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+
+
+
+
+
 :root {
   --primary: #3b4550;
   --primary-dark: #0a3d66;
@@ -21,6 +26,14 @@
 }
 
 
+
+
+
+
+
+
+
+
 @font-face {
   font-family: 'Inter Variable';
   font-style: normal;
@@ -29,6 +42,14 @@
   src: url(https://cdn.jsdelivr.net/fontsource/fonts/inter:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
   unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
 }
+
+
+
+
+
+
+
+
 
 
 body {
@@ -41,18 +62,37 @@ body {
   line-height: 1.6;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* Títulos principales */
 h1 {
-  font-size: 2.1rem;
-  font-weight: 900;
+  font-size: 1.5rem;
   line-height: 1.2;
-  margin: 1rem;
   text-wrap: balance;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+    color: var(--primary-light);
+  }
 }
 
 h1 + p {
   text-wrap: balance;
-  margin-bottom: 2rem;
+  margin-bottom: 2rem
 }
 
 /* Header */
@@ -70,18 +110,6 @@ header {
     font-weight: 700;
     color: var(--text-primary);
   }
-
-  svg {
-    color: var(--primary-light);
-    width: 30px;
-    height: 30px;
-  }
-}
-
-header>div:nth-child(1) {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 
 /* Navegación del header a otras páginas */
@@ -89,7 +117,6 @@ nav {
   align-items: center;
   gap: 1rem;
   display: flex;
-  position: sticky;
 
   a {
     text-decoration: none;
@@ -183,25 +210,34 @@ form input[type="text"]::placeholder {
   color: #64748b;
 }
 
-form button[type="submit"] {
+button {
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   background-color: var(--primary);
   color: white;
-  font-weight: 700;
+  font-weight: 400;
   border: none;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all 0.2s;
   font-family: inherit;
   font-size: 1rem;
   white-space: nowrap;
-}
 
-form button[type="submit"]:hover,
-form button[type="submit"]:focus {
-  background-color: var(--primary-hover);
-  outline: 2px solid white;
-  outline-offset: 2px;
+  &:hover, /* pseudo-clase que significa que el ratón está encima */
+  &:focus { /* pseudo-clase que significa que el elemento tiene el foco */
+    background-color: var(--primary-hover);
+    outline: 2px solid white;
+    outline-offset: 2px;
+  }
+
+  &:active { 
+    transform: scale(0.90)
+  }
+
+  &:disabled {
+    opacity: .5;
+    pointer-events: none;
+  }
 }
 
 /* Features Section */
@@ -249,6 +285,32 @@ main > section:nth-child(2) footer {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 16px
 }
+
+/* Feature Cards */
+/* article {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  margin-bottom: 16px;
+  border-radius: 0.5rem;                   
+  box-shadow: 0px 1px 3px 0 var(--shadow); 
+
+  svg {
+    color: var(--primary-light);          
+    background: rgba(0, 153, 255, 0.3);  
+    border-radius: 9999px;               
+    width: 64px;                         
+    height: 64px;                        
+    padding: 16px;                       
+  }
+
+  h3 {
+    font-weight: 500;
+  }
+
+  p {
+    color: var(--text-muted);
+  }
+} */
 
 /* Footer */
 footer {
